@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import UserFormDetails from "./UserFormDetails";
+import UserPersonalDetails from "./UserPersonalDetails";
 
 const UserForm = () => {
     const [values , setValues] = useState({
@@ -35,6 +36,8 @@ const UserForm = () => {
     switch (step){
         case 1:
             return <UserFormDetails values = {values} handleChange = {handleChange} next = {nextStep} />
+        case 2:
+            return <UserPersonalDetails values={values} handleChange = {handleChange} next = {nextStep} prev = {prevStep} />
     }
 
 
